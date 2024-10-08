@@ -1,7 +1,16 @@
 import React from 'react'
+import HeadingTwo from './HeadingTwo'  // the below 3 components are childs of function component(FunctionComp).
+import FunctionCompTwo from './FunctionCompTwo'
+import ParagraphComp from './ParagraphComp'
 
-export default function functionComp() {  // syntax-  function functionName
+const FunctionComp = () => {
   return (
-    <div>functionComp</div>
+    <div>
+        <HeadingTwo/>
+        <ParagraphComp/>
+        <FunctionCompTwo/>
+    </div>
   )
 }
+
+export default FunctionComp
