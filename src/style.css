@@ -1,0 +1,14 @@
+p{
+
+text-align: center;
+color: aqua;
+font-size: medium;
+}
+
+.image{
+    border-radius: 3%;
+    border-color: blue;
+    border-width: 5px;
+    border-style: solid;
+
+}

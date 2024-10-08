@@ -10,7 +10,7 @@ function App() {
   return (
     <>    
     { /* wrapper components <></> */} 
-      <img src={Photo} alt="bindu image"></img>  { /* giving the variable that is used in the import to get the image path */} 
+      <img src={Photo} className="image" alt="bindu image"></img>  { /* giving the variable that is used in the import to get the image path */} 
       <p>
        hi   
    </p>
