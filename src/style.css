@@ -1,11 +1,8 @@
-p{
 
-text-align: center;
-color: aqua;
-font-size: medium;
-}
 
 .image{
+    width: 100px;
+    height:150px;
     border-radius: 3%;
     border-color: blue;
     border-width: 5px;
