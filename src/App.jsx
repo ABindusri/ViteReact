@@ -13,6 +13,7 @@ import UserListComp from './components/UserListComp'
 import Form from './components/Form'
 import {Route,Routes, BrowserRouter} from 'react-router-dom' // importing route, BrowserRouter and routes from react router dom , we need to import these three to set routing
 import UserDataComp from './components/UserDataComp'
+import NavBar from './components/Nav/NavBar'
 function App() {
 const employeeData=[{id:1,Name:"Bindu",Salary:40000,Work:"Developer",Age:25},{id:2,Name:"Harish",Salary:50000,Work:"Developer",Age:25},{id:3,Name:"Bubu",Salary:10000,Work:"Designer",Age:20}]
  //to Fetch an API to get data
@@ -27,7 +28,9 @@ const employeeData=[{id:1,Name:"Bindu",Salary:40000,Work:"Developer",Age:25},{id
   return (
     <>   
 <BrowserRouter>
+<NavBar/> {/* composing nav bar on top*/}
 <Routes> 
+
   <Route path='/' element={<PropComp/>} />  {/* this is like visiting home , if no path given in the path. */}
   <Route path='/contact' element={<Form/>}/> {/* path indicates to the targted component , element is the Real component name */}
   <Route path='/count' element={<CountComp/>} />

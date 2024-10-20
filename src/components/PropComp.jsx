@@ -9,13 +9,7 @@ const PropComp = () => {
 
   return (
     <div>
-<RefPropComp Bindu={Bindu}/> {/*Passing obj as a prop */}
-<Link to='/contact'>
-<button type='submit' className='border-2 rounded-md p-2 mt-2 bg-sky-800 text-white '  >Go to Contact</button>
-
-</Link> {/*  using link tag to navigate/route */}
-<button className='border-2 bg-red-400 text-white p-2 m-2' onClick={()=>navigate('/count')}> Go to Counter</button>
-<button className='border-2 bg-green-900 text-white p-2 m-2' onClick={()=>navigate('/userlist')} >UserList </button>
+   
   </div>
   )
 }
