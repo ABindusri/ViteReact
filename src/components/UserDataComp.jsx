@@ -13,7 +13,7 @@ const UserDataComp = () => {
   return (
     <div>
         <button className='border-2 bg-emerald-700 p-2 m-2 text-white' onClick={fetchFun}>Fetch User Data</button>
-     <div className='flex'> {userData.map((UserdataSend)=> <UserListComp data={UserdataSend}/>)} </div>
+     <div className='flex md:flex-row flex-col'> {userData.map((UserdataSend)=> <UserListComp data={UserdataSend}/>)} </div>
     </div>
   )
 }

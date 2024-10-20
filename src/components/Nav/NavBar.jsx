@@ -92,7 +92,9 @@ function NavBar() {
                   <Typography sx={{ textAlign: 'center' }}>{page}</Typography>
                 </MenuItem>
               ))} */}
-              
+                <MenuItem onClick={()=>navigation('/userlist')}>UserList</MenuItem>
+            <MenuItem onClick={()=> navigation('/count')}>Counter</MenuItem>
+            <MenuItem onClick={()=>navigation('/contact')}>Contact</MenuItem>
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -106,7 +108,7 @@ function NavBar() {
               display: { xs: 'flex', md: 'none' },
               flexGrow: 1,
               fontFamily: 'monospace',
-              fontWeight: 700,
+              fontWeight: 400,
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',

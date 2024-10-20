@@ -19,7 +19,7 @@ const Form = () => {
     
   return (
     <div>
-        <form className='flex flex-col mx-96 my-8 border-sky-900 bg-cyan-100 p-5 border-2 rounded-2' 
+        <form className='flex flex-col md:mx-96 md:my-8 border-sky-900 bg-cyan-100 p-5 border-2  mx-3 my-6 rounded-2 ' 
         onSubmit={handleSubmit}>
             <label>Name</label>
             <input type='text' value={name} className='py-2 focus:ring-2 focus:ring-red-500  focus:outline-none focus:rounded-sm' onChange={(event)=>{setName(event.target.value)}}></input> 
