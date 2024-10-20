@@ -7,6 +7,13 @@ const Form = () => {
     const [course,setCourse]=useState('Mean');
     const handleSubmit=(event) =>{  {/* preventDefault is used to stop the refreshing of page. event is returned automatically by the form */}
         event.preventDefault();
+        if(mobile.length==10){
+         console.log("Validation Success")
+        }
+        else{
+            alert("Enter 10 digits")
+          console.log("Incorrect format")
+        }
         console.log(name,role,mobile,course);
     }
     

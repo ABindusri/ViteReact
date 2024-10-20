@@ -11,6 +11,8 @@ import ReactListsComp from './components/ReactListsComp'
 import { useState } from 'react'
 import UserListComp from './components/UserListComp'
 import Form from './components/Form'
+import {Route,Routes, BrowserRouter} from 'react-router-dom' // importing route, BrowserRouter and routes from react router dom , we need to import these three to set routing
+import UserDataComp from './components/UserDataComp'
 function App() {
 const employeeData=[{id:1,Name:"Bindu",Salary:40000,Work:"Developer",Age:25},{id:2,Name:"Harish",Salary:50000,Work:"Developer",Age:25},{id:3,Name:"Bubu",Salary:10000,Work:"Designer",Age:20}]
  //to Fetch an API to get data
@@ -23,19 +25,17 @@ const employeeData=[{id:1,Name:"Bindu",Salary:40000,Work:"Developer",Age:25},{id
   .catch(error => console.error('Error:', error));
  }
   return (
-    <>    
-    { /*  rendering/composing the component <></> */}  { /* wrapper components <></> */} 
-    <PropComp/>
-    <StateComp/>
-    <CountComp/>
-    <div className='flex'>
-    {employeeData.map((Empdata,index)=> <ReactListsComp data={Empdata} key={index} />)}     { /* using map to render the employee components , its like a for loop to get the data  . data={Empdata} is we are passing data by sending it as a prop */} 
-    { /* map is used to loop the employeeData   */} 
-    <button onClick={fetchFun}>fetch btn</button>
-    {userData.map((Edata,index)=> <UserListComp data={Edata} key={index}/>)}     { /* sending Edata into data using map. data  is used as a prop in UserListComp to print cards */}
-    {/* index is to make it unique */}
-     </div>
-     <Form/>
+    <>   
+<BrowserRouter>
+<Routes> 
+  <Route path='/' element={<PropComp/>} />  {/* this is like visiting home , if no path given in the path. */}
+  <Route path='/contact' element={<Form/>}/> {/* path indicates to the targted component , element is the Real component name */}
+  <Route path='/count' element={<CountComp/>} />
+  <Route path='/userlist' element={<UserDataComp/>} /> {/* in path , we need to give only small letters */}
+</Routes>
+ </BrowserRouter> {/* BrowserRouter is like a main router, path is declare in the Route , Router means wrapper provided by BrowserRouter*/}
+ {/* its like a main router */}
+
     </>
   )
 }
